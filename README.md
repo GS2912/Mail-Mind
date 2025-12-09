@@ -9,7 +9,7 @@ A full-stack AI-powered email management system that fetches real emails, provid
 - ✅ **AI-Powered Analysis**: Summarizes inbox, detects urgent emails, identifies pending replies
 - ✅ **Smart Quick Replies**: One-click reply generation (Acknowledge, Ask Update, Confirm, Decline)
 - ✅ **Chat Agent**: Interactive AI assistant that can draft emails, check inbox, and answer questions
-- ✅ **OpenAI Tool Calling**: Uses OpenAI Responses API with function calling for intelligent email management
+- ✅ **LLM Function Tool Calling**: Uses Local LLM exposed via FastAPI with function calling for intelligent email management
 
 ## 🏗️ Project Structure
 
@@ -20,7 +20,7 @@ College-Email-Project/
 │   │   ├── services/
 │   │   │   ├── imapService.ts      # IMAP email fetching
 │   │   │   ├── emailService.ts     # SMTP email sending
-│   │   │   └── agentService.ts     # OpenAI agent with tool calling
+│   │   │   └── agentService.ts     # agent with tool calling
 │   │   ├── routes/
 │   │   │   ├── inbox.ts            # /api/inbox endpoints
 │   │   │   ├── email.ts            # /api/email/send endpoint
@@ -84,7 +84,7 @@ College-Email-Project/
 **Custom IMAP/SMTP:**
 - Check your email provider's documentation for IMAP/SMTP settings
 
-### Step 2: Get OpenAI API Key
+### Step 2: Get OpenAI API Key (if using OpenAI APIs)
 
 1. Go to [OpenAI Platform](https://platform.openai.com/)
 2. Sign up or log in
@@ -284,28 +284,11 @@ Chat with AI agent
 ## 📝 Notes
 
 - **Email Limits**: Some providers limit IMAP connections. If you see connection errors, wait a few minutes and try again.
-- **Rate Limiting**: OpenAI API has rate limits. If you hit limits, wait before making more requests.
-- **Security**: Never commit your `.env` file to version control. It's already in `.gitignore`.
+- **Rate Limiting**: If you are using OpenAI API, it has rate limits. If you hit limits, wait before making more requests. If you are using local LLM you are set.
 
-## 🎓 Project Requirements Met
-
-✅ Real email fetching via IMAP  
-✅ Real email sending via SMTP  
-✅ AI inbox summarization  
-✅ Urgent email detection  
-✅ Pending reply identification  
-✅ One-click smart replies  
-✅ Chat agent with tool calling  
-✅ OpenAI Responses API integration  
-✅ Local development setup  
-✅ Frontend UI with TailwindCSS  
-✅ Complete project structure  
-
-## 📄 License
-
-This is a college project for educational purposes.
 
 ---
 
 **Happy Email Managing! 📧✨**
+
 
